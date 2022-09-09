@@ -9,8 +9,10 @@ interface LayoutProps {
 }
 
 const Header = styled.div({
-  backgroundColor: 'black',
+  width: '100%',
+  backgroundColor: '#1C1B1F',
   height: 50,
+  boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
 });
 
 export default function Layout({ title, seoTitle, children }: LayoutProps) {
@@ -23,8 +25,4 @@ export default function Layout({ title, seoTitle, children }: LayoutProps) {
       <div>{children}</div>
     </div>
   );
-}
-
-export function cls(...classnames: string[]) {
-  return classnames.join('');
 }
