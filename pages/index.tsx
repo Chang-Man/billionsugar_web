@@ -6,13 +6,16 @@ import facepaint from 'facepaint';
 const MainItem = styled.div({
   backgroundColor: 'pink',
   width: '100%',
-  height: 50,
-  marginBottom: 10,
+  height: 200,
 });
 
-const MainItems = styled.div({
-  display: 'grid',
-});
+const MainItems = styled.div((props) =>
+  mq({
+    display: 'grid',
+    gridTemplateColumns: ['1fr', '1fr 1fr', '1fr 1fr 1fr'],
+    gridGap: 15,
+  }),
+);
 
 const breakpoints = [576, 768, 992, 1200];
 
