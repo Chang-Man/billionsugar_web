@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 import type { NextPage } from 'next';
 import Layout from '../components/layout';
+import facepaint from 'facepaint';
 
 const MainItem = styled.div({
   backgroundColor: 'pink',
@@ -12,6 +13,10 @@ const MainItem = styled.div({
 const MainItems = styled.div({
   display: 'grid',
 });
+
+const breakpoints = [576, 768, 992, 1200];
+
+const mq = facepaint(breakpoints.map((bp) => `@media (min-width: ${bp}px)`));
 
 const Home: NextPage = () => {
   return (
