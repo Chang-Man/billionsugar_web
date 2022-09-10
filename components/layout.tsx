@@ -15,6 +15,12 @@ const Header = styled.div({
   boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
 });
 
+const Main = styled.div({
+  width: '100%',
+  height: 'calc(100% - 50px)',
+  padding: 50,
+});
+
 export default function Layout({ title, seoTitle, children }: LayoutProps) {
   return (
     <div>
@@ -22,7 +28,7 @@ export default function Layout({ title, seoTitle, children }: LayoutProps) {
         <title>{seoTitle ? `${title} | BillionSugar` : 'BillionSugar'}</title>
       </Head>
       <Header />
-      <div>{children}</div>
+      <Main>{children}</Main>
     </div>
   );
 }

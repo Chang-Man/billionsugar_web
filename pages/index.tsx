@@ -1,12 +1,27 @@
+import styled from '@emotion/styled';
 import type { NextPage } from 'next';
-import { useEffect, useState } from 'react';
 import Layout from '../components/layout';
-import styles from '../styles/Home.module.css';
+
+const MainItem = styled.div({
+  backgroundColor: 'pink',
+  width: '100%',
+  height: 50,
+  marginBottom: 10,
+});
+
+const MainItems = styled.div({
+  display: 'grid',
+});
 
 const Home: NextPage = () => {
   return (
     <Layout title="Home">
-      <div>안녕하세요 내용물입니다.</div>
+      <MainItems>
+        <MainItem />
+        <MainItem />
+        <MainItem />
+        <MainItem />
+      </MainItems>
     </Layout>
   );
 };
