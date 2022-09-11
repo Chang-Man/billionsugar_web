@@ -2,8 +2,13 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: timeline -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: -apple-system, Conthrax, sans-serif;
+}
+
+@font-face {
+  font-family: "Conthrax";
+  font-weight: 200;
+  src: url("/fonts/conthrax-sb.ttf") format("truetype");
 }
 
 a {
